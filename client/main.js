@@ -10,6 +10,8 @@ const formHandler = (event) => {
 
   const formData = new FormData(formElement);
 
+  event.submitter.disabled = true;
+
   fetch("http://localhost:7777/answers", {
     method: "POST",
     body: formData,
@@ -19,6 +21,10 @@ const formHandler = (event) => {
       (result) =>
         (div.textContent = `You answer correct on ${result} questions!`)
     );
+
+  setTimeout(() => {
+    event.submitter.disabled = false;
+  }, 1000);
 };
 
 const getFetchedQuestions = (url, arr) => {
@@ -60,6 +66,13 @@ getFetchedQuestions("http://localhost:7777/questions", questions).then(() => {
   });
   const sendResultButton = document.createElement("button");
   sendResultButton.textContent = "Check answers";
+  //   sendResultButton.onclick = () => {
+  //     sendResultButton.disabled = true;
+
+  //     setTimeout(() => {
+  //       sendResultButton.disabled = false;
+  //     }, 1000);
+  //   };
   formElement.append(sendResultButton);
 });
 
