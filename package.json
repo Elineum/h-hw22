@@ -1,0 +1,30 @@
+{
+  "name": "homework-22",
+  "version": "0.0.1",
+  "description": "h-hw22",
+  "main": "main.js",
+  "scripts": {
+    "start": "nodemon ./server/server.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elineum/h-hw22.git"
+  },
+  "author": "Elineum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elineum/h-hw22/issues"
+  },
+  "homepage": "https://github.com/Elineum/h-hw22#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.3.0",
+    "@fastify/multipart": "^7.7.2",
+    "@fastify/static": "^6.10.2",
+    "fastify": "^4.20.0",
+    "path": "^0.12.7",
+    "url": "^0.11.1"
+  }
+}

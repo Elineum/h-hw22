@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.question-form {
+  max-width: 800px;
+  text-align: center;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+}
+
+.question {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.radio-wrap {
+  display: flex;
+  gap: 5px;
+}
+
+.answers {
+  display: flex;
+  justify-content: space-evenly;
+}
